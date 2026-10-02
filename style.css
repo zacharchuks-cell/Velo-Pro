@@ -1,0 +1,137 @@
+/* ================= ОСНОВА ================= */
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef8ff;
+    color: #17324d;
+}
+
+/* ================= HEADER ================= */
+header {
+    background-color: #dff2ff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #b9e2ff;
+}
+header h2 { margin: 0; color: #1677b8; }
+nav a {
+    color: #176b9f;
+    text-decoration: none;
+    margin-left: 20px;
+}
+nav a:hover { color: #0b4f7a; text-decoration: underline; }
+
+/* ================= HERO ================= */
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background-color: #bfe7ff;
+    color: #123c59;
+}
+.hero h1 { font-size: 48px; margin-bottom: 20px; }
+.hero p {
+    font-size: 20px;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* ================= КНОПКА ================= */
+.button {
+    display: inline-block;
+    background-color: #258bc9;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.button:hover { background-color: #176b9f; }
+
+/* ================= CONTENT ================= */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+main > h1, main > h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #176b9f;
+}
+
+/* ================= КАРТКИ ================= */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #b9e2ff;
+    border-radius: 12px;
+    flex: 1 1 0;
+    min-width: 0;
+    box-shadow: 0 4px 12px rgba(23, 107, 159, 0.10);
+}
+.card:hover { border-color: #78c5ed; }
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.card h3 { margin-top: 20px; color: #176b9f; }
+.card p { line-height: 1.6; }
+
+/* 3 картки в ряд на about */
+.about-cards .card { flex: 0 0 calc(33.333% - 14px); }
+.no-animation { animation: none; }
+
+/* ================= CONTACTS ================= */
+.contact-box {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid #b9e2ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(23, 107, 159, 0.10);
+}
+.contact-box h2 { color: #176b9f; }
+.contact-box p { font-size: 18px; line-height: 1.6; }
+.contact-box a { color: #1677b8; text-decoration: none; }
+.contact-box a:hover { text-decoration: underline; }
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #176b9f;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+footer a {
+    color: #dff2ff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+footer a:hover { color: white; text-decoration: underline; }
+
+/* ================= ТЕЛЕФОН ================= */
+@media (max-width: 800px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav { text-align: center; }
+    nav a { margin: 0 8px; }
+    .hero { padding: 70px 20px; }
+    .hero h1 { font-size: 36px; }
+    .hero p { font-size: 18px; }
+    .card, .about-cards .card { flex: 0 0 100%; }
+    .contact-box { padding: 20px; }
+}
